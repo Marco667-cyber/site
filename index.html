@@ -1,0 +1,194 @@
+<html>
+<head>
+		<title>sparkside academy</title>	
+</head>
+	<body>
+		<div style="height: 50;width: 100%;text-align: CENTER;">  
+            <img style="height:51;width: 80;position: relative;right: 500;bottom:5;"src="logo.jpg"><h1 style="text-align: center;position: relative;bottom: 65;color: green;">SPARKSIDE ACADEMY</h1></div>
+		<style>
+
+     
+        nav {
+            background-color: #333;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex; 
+        }
+
+
+        nav ul li a  {
+            display: block;
+            padding: 14px;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+        }
+        nav ul li a:hover {
+            color: lightgreen;
+            text-shadow: 2px 2px 5px black; 
+        }
+        .diapo{
+        	max-width: 1000px;
+        	position: relative;
+        	margin: auto;
+        	overflow: hidden;
+        }
+        .mySlides{
+        	display:none;
+        }
+    
+        .fade{
+        	animation-name: fade;
+        	animation-duration: 1,5s;
+        }
+        @keyframes fade {
+        	from {opacity: .4} to {opacity: 1}
+        }
+        .avant, .next{
+        	cursor:pointer;
+        	position: absolute;
+        	top: 50%;
+        	padding: 16px;
+        	top: 190;
+        	color: lightgreen;
+        	font-weight: bold;
+        	
+        }
+        .next{right: 0;}
+        .footer {
+            background-color:#111 ;
+            color: #fff;
+            padding: 40px 20px;
+        }
+        .container{
+            display: flex;
+            justify-content: space-between;
+        }
+        .col h4{
+            margin-bottom: 10px;
+        }
+        .col ul li a{
+            color: #ccc;
+        }
+        .col ul li a:hover{
+            color: lightgreen;
+        }
+        copyright {
+            text-align: center;
+            margin-top: 20px;
+        }
+        .text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 43px;
+            font-weight: bold;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 10px;
+            text-shadow: 2px 2px 5px black;
+        }
+        button :hover{
+            color: red;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+        }
+        button{
+            height: 30;
+
+        }
+        a{
+            text-decoration: none;
+        }
+
+    </style>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Presentation.html">A propos</a></li> 
+            <li><a href="frais.html">Frais de scolarite</a></li>
+            <li><a href="vie.html">Nos Atouts</a></li>
+            
+            
+        </ul>
+        <button style="position: relative;left: 1200;bottom: 40;box-shadow: black;border-radius: 8px;background-color: lightgreen;border: none;">
+        <a href="devoir.php">S'enregistrer</a></button>
+    </nav>
+
+  <DIV class="diapo">
+    <div class="mySlides fade">
+        <img style="width: 100%;height: 500;"src="ecole11.png">
+        <div class="text">SPARKSIDE ACADEMY</div>
+    </div>
+    <div class="mySlides fade">
+        <img style="width: 100%;height: 500;"src="ecole22.png">
+        <div class="text">L'ECOLE DU FUTUR</div>
+    </div>
+    <div class="mySlides fade">
+        <img style="width: 100%;height: 500;"src="batiment.JPG">
+        <div class="text">UN CADRE IDEALE POUR LES ETUDES</div>
+    </div>
+    <a style="font-size: 60" class="avant" onclick="plusSlides(-1)">&#10094;</a>
+    <a style="font-size: 60" class="next" onclick="plusSlides(1)">&#10095;</a>
+
+</DIV>
+<script>
+	let slideIndex = 1;
+	showSlides(slideIndex);
+
+	function plusSlides(n) {
+		showSlides(slideIndex += n);
+	}
+
+	function showSlides(n) {
+		let i;
+		let slides = document.getElementsByClassName("mySlides");
+		if (n > slides.lenght) {slideIndex = 1}
+		if(n<1) {slideIndex = slides.length}
+			for (i=0; i < slides.length; i++){
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex-1].style.display = "block"
+		}
+</script>
+</body>
+
+<footer class="footer">
+    <div class="container">
+        <div class="col">
+            <h3>SPARKSIDE ACADEMY</h3>
+            <p>L'ecole du futur</p><br>
+            <img style="height:150;width: 200;"src="logo.jpg">
+        </div>    
+        <div class="col">
+        <h4>Liens</h4>
+        <ul>
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="Presentation.html">A propos</a></li> 
+            <li><a href="frais.html">Frais de scolarite</a></li>
+            <li><a href="devoir.php">S'enregistrer</a></li>
+            <li><a href="vie.html">Nos Atouts</a></li>
+            
+            
+        </ul>
+    </div>
+    <div class="col">
+        <h4>Contact</h4>
+        <p>Email: sparkside@gmail.com</p>
+        <p>Tel: +237 656452704</p>
+        <p>Whatsapp: +237 656452704</p>
+        <p>localisation: Yaounde-jouvence</p>
+    </div>
+</div>
+
+    <P class="copyright">
+        Copyright 2026 Sparkside Academy - Tous droits reserves
+    </P>
+
+</footer>
+</HTML>
