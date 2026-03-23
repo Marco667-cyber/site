@@ -224,7 +224,7 @@ document.getElementById('inscriptionForm')
             <li><a href="index.html">Accueil</a></li>
              <li><a href="presentation.html">A propos</a></li> 
             <li><a href="frais.html">Frais de scolarite</a></li>
-            <li><a href="devoir.PHP">S'enregistrer</a></li>
+            <li><a href="devoir.php">S'enregistrer</a></li>
             <li><a href="vie.html">Nos Atouts</a></li>
             
             
